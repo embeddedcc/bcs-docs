@@ -1,0 +1,6 @@
+site_name: BCS User Guide
+pages:
+- [index.md, Home]
+- [ui.md, User Interface]
+- [finder.md, BCS Finder]
+theme: readthedocs
