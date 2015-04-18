@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>User Interface - BCS User Guide</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> BCS User Guide</a>
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+      <ul class="current">
+    
+        
+            <li class="toctree-l1 ">
+                <a class="" href="..">Home</a>
+                
+            </li>
+        
+
+    
+        
+            <li class="toctree-l1 current">
+                <a class="current" href="./">User Interface</a>
+                
+                    <ul>
+                    
+                        <li class="toctree-l3"><a href="#help-links">Help Links</a></li>
+                        
+                    
+                        <li class="toctree-l3"><a href="#process-bar">Process Bar</a></li>
+                        
+                    
+                        <li class="toctree-l3"><a href="#control-ui">Control UI</a></li>
+                        
+                            <li><a class="toctree-l4" href="#processes">Processes</a></li>
+                        
+                            <li><a class="toctree-l4" href="#temperatures">Temperatures</a></li>
+                        
+                            <li><a class="toctree-l4" href="#outputs">Outputs</a></li>
+                        
+                            <li><a class="toctree-l4" href="#inputs">Inputs</a></li>
+                        
+                    
+                    </ul>
+                
+            </li>
+        
+
+    
+        
+            <li class="toctree-l1 ">
+                <a class="" href="../finder/">BCS Finder</a>
+                
+            </li>
+        
+
+    
+</ul>
+
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">BCS User Guide</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+    <li>User Interface</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              <h2 id="help-links">Help Links</h2>
+<p>By default, every section on the BCS UI has a ? next to it which contains a link to the relevant section in the manual.  This can be turned off using the Toggle Help link at the bottom of every page.</p>
+<h2 id="process-bar">Process Bar</h2>
+<p>The Process Bar appears on the left hand side of all pages in the BCS interface so you can always see which processes are currently running and provides access to the All Stop button.</p>
+<p><img alt="process bar" src="../img/ui/process-bar.png" /> </p>
+<p>Processes can be started or stopped by clicking the process in the process bar.  The All Stop button will stop all processes and turn off all outputs that are currently on even if they are not being controlled by a process.</p>
+<p>The &lt; link below the process bar can be used to hide the process bar if it is not needed.  This can help with space restrictions on smaller screens.</p>
+<h2 id="control-ui">Control UI</h2>
+<p>The Control UI is the main interface for using the BCS. It displays the current temperature for all enabled temperature probes, information on running processes, the current status of all enabled outputs and inputs.</p>
+<p><img alt="control ui with process" src="../img/ui/control-ui-process.png" />
+<em>Above: Control UI with a running processes</em></p>
+<h3 id="processes">Processes</h3>
+<p>Running processes will be shown directly on the Control UI.  Processes can also be set up with an option so they are always displayed.</p>
+<p><img alt="running process" src="../img/ui/process-control.png" /></p>
+<p>The process can be paused or resumed using the button in the upper right hand corner.</p>
+<p>The state can be changed directly by clicking on the desired state in the process section.</p>
+<p>Clicking the name of the process will stop (or start) the process.</p>
+<h3 id="temperatures">Temperatures</h3>
+<p>The BCS offers 3 options for viewing the current temperatures.</p>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dial Style</td>
+<td><img alt="Dial Style" src="../img/ui/dial.png" /></td>
+</tr>
+<tr>
+<td>LED Style</td>
+<td><img alt="LED Style" src="../img/ui/LED.png" /></td>
+</tr>
+<tr>
+<td>Compact Style</td>
+<td><img alt="Compact Style" src="../img/ui/compact.png" /></td>
+</tr>
+</tbody>
+</table>
+<p><em>The compact style is great on mobile devices!</em></p>
+<h3 id="outputs">Outputs</h3>
+<p>Displays the current state of the outputs.</p>
+<p><img alt="outputs" src="../img/ui/outputs.png" /></p>
+<p>Outputs can be manually controlled by clicking on them in the Control UI, but any running processes or ladder logic will take precedence.</p>
+<h3 id="inputs">Inputs</h3>
+<p>Displays the current state of the inputs.</p>
+<p><img alt="inputs" src="../img/ui/inputs.png" /></p>
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../finder/" class="btn btn-neutral float-right" title="BCS Finder"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href=".." class="btn btn-neutral" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+    <!-- Copyright etc -->
+    </p>
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+        
+      <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../finder/" style="color: #fcfcfc">Next &raquo;</a></span>
+    </span>
+</div>
+
+<!--
+MkDocs version  : 0.12.1
+Docs Build Date : 2015-04-18 00:00:43.954872
+-->
+</body>
+</html>
