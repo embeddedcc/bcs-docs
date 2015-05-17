@@ -1,6 +1,15 @@
 site_name: BCS User Guide
+
 pages:
 - [index.md, Home]
 - [ui.md, User Interface]
 - [finder.md, BCS Finder]
-theme: readthedocs
+- [main_control.md, Main Control]
+- [data_log.md, Datalog]
+- [process_editor.md, Process Editor]
+- [temp_adjust.md, Temp Setpoint Adjust]
+- [ladder_logic.md, Ladder Logic]
+- [settings.md, Settings]
+
+
+theme: ReadTheDocs
