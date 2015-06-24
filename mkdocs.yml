@@ -1,9 +1,10 @@
-site_name: BCS User Guide
+site_name: BCS 4.0 User Guide
 
 pages:
 - [index.md, Home]
 - [ui.md, User Interface]
 - [finder.md, BCS Finder]
+- [utilities.md, Online Utilities]
 - [main_control.md, Main Control]
 - [data_log.md, Datalog]
 - [process_editor.md, Process Editor]

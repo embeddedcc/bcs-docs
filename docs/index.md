@@ -12,7 +12,7 @@ The BCS documentation is basically setup to correspond to the screens available 
 -  [Ladder Logic](ladder_logic.md)
 -  [Settings](settings.md)
 
-In addition, there are pages to help you better understand the [User Interface](ui.md) and the [BCS Finder](finder.md) application.
+In addition, there are pages to help you better understand the [User Interface](ui.md), the [BCS Finder](finder.md) application, and the  [Online Utilities](utilities.md).
 
 ## Setup
 
