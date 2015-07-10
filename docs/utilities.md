@@ -1,6 +1,7 @@
 # Online Utilities 
 
 ## Recipes
+The Recipes utility allows you to manually configure recipe variables such as strike water temperature on your BCS. This functionality allows you to modify processes to fit each individual beer that you brew.
 
 ## Backup/Restore
 The Backup/Restore utility allows you to save your settings and/or your processes to a local drive on your computer. 
@@ -33,5 +34,6 @@ Navigate to the 3.x Migrator utility. Enter the IP address of your BCS. Click on
 
 ## PID Tuner
 
+The PID Tuner is used to calibrate the proportional, integral, and derivative gains of the BCS. This is normally not necessary, but the functionality has been built into the utility to accommodate the need for fine tuning the PID settings.
 
-
+The normal PID settings are automatically tuned for the temperature probes that are available for the BCS from retailer like [Brewers Hardware](http://www.brewershardware.com). These setting are shown on the [Settings](settings.md) page of the UI.
