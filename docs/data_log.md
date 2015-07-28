@@ -25,7 +25,7 @@ The Datalog Settings section allows you to customize several aspects of the Data
 
 ![datalog graph](img/datalog/datalog_settings.png)
 
-The **Four Channel Mode** check box allows you to choose how many channels for which you want to record data. By default, 8 channels are recorded and each channel can have up to 64 data points. This is based on the available memory in the BCS. If you check the box for 4 Channel Mode, data for only 4 channels will be recorded, but they will have 128 data points available. Keep this in mind when setting the Frequency for each source type and whether or not you want to Rollover data for that channel.  
+The **Four Channel Mode** check box allows you to choose how many channels for which you want to record data. By default on the BCS 462, 8 channels are recorded and each channel can have up to 64 data points. This is based on the available memory in the BCS. If you check the box for 4 Channel Mode, data for only 4 channels will be recorded, but they will have 128 data points available. Four channel mode is selected by default on the BCS 460. Keep this in mind when setting the Frequency for each source type and whether or not you want to Rollover data for that channel.  
 
 Under **Source Type**, you can select the source of the data to be displayed on the graph. The choices are *Disabled*, *Temp*, *Setpoint*, *Input*, and *Output*. When *Disabled* is selected, no data will be displayed. When *Temp* is selected, the temperature for the associated Temp Probe will be displayed. When *Setpoint* is selected, the graph will display when the setpoint is reached for the associated temp probe based on the settings configured on the [Temp Setpoint Adjust](temp_adjust.md) page. When *Input* is selected, the state of the selected Discrete Input will be displayed on the graph. When *Output* is selected, the state of the output source will be displayed on the graph.
 
@@ -35,7 +35,7 @@ Under the **Frequency** column, you can select how often you want to sample data
 
 Under the **Color** column, you can select custom colors to display for each line.
 
-Under the Rollover column, you can select whether or not you want to rollover the data being recorded on the graph once the memory buffer is full. If the Rollover box is ***not*** selected, data for that line will only be recorded until the buffer is full. If the Rollover box ***is*** selected, the oldest data will be discarded to make room for new data.
+Under the **Rollover** column, you can select whether or not you want to rollover the data being recorded on the graph once the memory buffer is full. If the Rollover box is ***not*** selected, data for that line will only be recorded until the buffer is full. If the Rollover box ***is*** selected, the oldest data will be discarded to make room for new data.
 
 If you chose to display 2 scales in the Datalog Scale section, you can choose which scale to use on the graph for displaying data for each line under Datalog Settings.
 

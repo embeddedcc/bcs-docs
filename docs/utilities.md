@@ -4,7 +4,7 @@
 The Recipes utility allows you to manually configure recipe variables such as strike water temperature on your BCS. This functionality allows you to modify processes to fit each individual beer that you brew.
 
 ## Backup/Restore
-The Backup/Restore utility allows you to save your settings and/or your processes to a local drive on your computer. 
+The Backup/Restore utility allows you to save your settings and/or your processes to a local drive on your computer. **The Backup/Restore utility only works when Authentication is disabled on the BCS. Authentication can be disabled on the [Settings](settings.md) page.**
 
 ### Backup
 To backup your configuration, click on the Backup/Restore tab at the top of the screen.

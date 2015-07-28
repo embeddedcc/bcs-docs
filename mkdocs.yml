@@ -11,6 +11,7 @@ pages:
 - [temp_adjust.md, Temp Setpoint Adjust]
 - [ladder_logic.md, Ladder Logic]
 - [settings.md, Settings]
+- [examples.md, Configuration Examples]
 
 
 theme: ReadTheDocs
