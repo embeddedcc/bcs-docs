@@ -1,10 +1,10 @@
 # Online Utilities 
 
 ## Recipes
-The Recipes utility allows you to manually configure recipe variables such as strike water temperature on your BCS. This functionality allows you to modify processes to fit each individual beer that you brew.
+The [Recipes utility](http://lawn-chair.github.io/bcs-recipes/) allows you to manually configure recipe variables such as strike water temperature on your BCS. This functionality allows you to modify processes to fit each individual beer that you brew. 
 
 ## Backup/Restore
-The Backup/Restore utility allows you to save your settings and/or your processes to a local drive on your computer. **The Backup/Restore utility only works when Authentication is disabled on the BCS. Authentication can be disabled on the [Settings](settings.md) page.**
+The [Backup/Restore utility](http://lawn-chair.github.io/bcs-backup/) allows you to save your settings and/or your processes to a local drive on your computer. **The Backup/Restore utility only works when Authentication is disabled on the BCS. Authentication can be disabled on the [Settings](settings.md) page.**
 
 ### Backup
 To backup your configuration, click on the Backup/Restore tab at the top of the screen.
@@ -28,12 +28,12 @@ Once the utility reads the file, you can choose to restore the Settings and/or i
 
 
 ## 3.x Config Migrator
-The Config Migrator allows you to import your existing BCS 3.x configuration into 4.0. To begin, you must first have a 3.x backup file. 
+The [Config Migrator](http://lawn-chair.github.io/bcs-config-migrator/) allows you to import your existing BCS 3.x configuration into 4.0. To begin, you must first have a 3.x backup file. 
 
 Navigate to the 3.x Migrator utility. Enter the IP address of your BCS. Click on the **Choose File** button and select your 3.x backup file. Click on the Begin Migration button. Once all the configuration parameters are shown as **Done**, you can close the progress window.  Once the migration process has completed, you need to reset the BCS for the changes to take effect. Go to the [Settings](settings.md) page and click on the **System Reset** button.
 
 ## PID Tuner
 
-The PID Tuner is used to calibrate the proportional, integral, and derivative gains of the BCS. This is normally not necessary, but the functionality has been built into the utility to accommodate the need for fine tuning the PID settings.
+The [PID Tuner](http://lawn-chair.github.io/bcs-pid-tuner/) is used to calibrate the proportional, integral, and derivative gains of the BCS. This is normally not necessary, but the functionality has been built into the utility to accommodate the need for fine tuning the PID settings.
 
-The normal PID settings are automatically tuned for the temperature probes that are available for the BCS from retailer like [Brewers Hardware](http://www.brewershardware.com). These setting are shown on the [Settings](settings.md) page of the UI.
+The normal PID settings are automatically tuned for the temperature probes that are available for the BCS from retailers like [Brewers Hardware](http://www.brewershardware.com). These setting are shown on the [Settings](settings.md) page of the UI.
