@@ -1,4 +1,4 @@
-## BCS Finder
+# BCS Finder
 
 The BCS finder is a small utility which uses a UDP based locator protocol to find BCS devices on the local network.  It will only work if it is run from a computer on the same network as the BCS.
 
