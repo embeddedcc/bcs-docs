@@ -3,7 +3,7 @@
 While programming processes can provide a robust method for programming complex interactions on the BCS, sometimes it is more efficient to use low level programming. That is what ladder logic provides. You do not have to use ladder logic, but if you do it supersedes any processes that have been configured. In addition, unlike processes, ladder logic is always running when the BCS is powered on.
 
 
-## Ladder Logic
+## Ladder Logic Defined
 
 Ladder logic is based on Boolean functions such as AND and OR. Each rung has five slots. The first four slots are contacts and the last column is a coil. The coil slot is the result of the logic configured in the first four slots. Each slot must be filled with either a Process, Input, Output, Register, or Contact. The slots are connected to each other using Wires. Rungs are in groups of four. Rungs in the same group can be connected using wires. Rungs in different groups cannot be connected directly, but can be connected using Registers (explained below). When changes are made to the ladder logic, they are automatically saved and applied immediately.
 
@@ -53,14 +53,29 @@ Like outputs, processes can also be placed in either contact or coil slots on th
 ## Examples ##
 Below are some common configuration examples using ladder logic. Use the examples below to help build out your ladder logic based on how you use your BCS. Remember, ladder logic takes precedence over any processes that are running. If you have a process running that has an output turned off, but that same output is turned on in ladder logic, then the output will be turned on.
 
-### Example 1
+### Example 1 - Controlling Two Outputs with One Input
+In this example input 0 (DIN 0) is used to control two different outputs - OUT 1 and OUT 2. In the normally open position on Rung 0, OUT 1 will be turned on. On Rung 1, when DIN 0 is in the normally closed position, OUT 2 will be turned on. In this example, the first column is populated with the appropriate input. The spaces between the columns are filled with wires, and the desired output is placed in the last, or coil, position.
+
+![example 1](img/ladder_logic/example_01.png)
+
+### Example 2 - Logical AND
+To create a logical AND function between two or more variables, place them in series. In the example below, if both DIN 1 and DIN 2 are NO, the OUT 3 will be NO (or turned on).
 
 
-### Example 2
+![example 2](img/ladder_logic/example_02.png)
+
+### Example 3 - Logical OR
+To create a logical OR between variables, place them in parallel. In the example below, if either output 5, 6, or 7 is on, then output 9 will also be on. In this particular example, outputs 5, 6, and 7 are all motorized ball valves that control the flow of coolant in a jacketed conical. Output 9 is a pump the circulates the coolant. The result of this ladder logic is that if any of the ball valves are open, then the pump will turn on. The valves are controlled by a process that is configured to control the fermentation temperatures of the jacketed conicals.
 
 
-### Example 3
+![example 3](img/ladder_logic/example_03.png)
 
+### Example 4 - Alarm To Register 10
+Another option is to use Register 10 to sound an alarm. This can be configured on the [Settings](settings.md) page under General Settings by checking the **Alarm to Register 10** box. This will activate Register 10 any time an alarm is set to sound as a result of processes. In this example, NO Register 10 is in the first slot and is connected via wires and contacts to NO Output 8 in the coil position. When Register 10 is turned on, Output 8 is turned on.
 
-### Example 4
+![example 4](img/ladder_logic/example_04.png) 
 
+### Example 5 - Starting a Process With an Input
+In this example, you can connect a two-way switch to a DIN to start or stop a process.
+
+![example 5](img/ladder_logic/example_05.png)
