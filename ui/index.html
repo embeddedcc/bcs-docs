@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>User Interface - BCS User Guide</title>
+  <title>User Interface - BCS 4.0 User Guide</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -17,6 +17,12 @@
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../css/highlight.css">
 
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "User Interface";
+  </script>
+  
   <script src="../js/jquery-2.1.1.min.js"></script>
   <script src="../js/modernizr-2.8.3.min.js"></script>
   <script type="text/javascript" src="../js/highlight.pack.js"></script>
@@ -32,60 +38,108 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> BCS User Guide</a>
-        
+        <a href=".." class="icon icon-home"> BCS 4.0 User Guide</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-      <ul class="current">
-    
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
         
-            <li class="toctree-l1 ">
-                <a class="" href="..">Home</a>
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">User Interface</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#the-user-interface">The User Interface</a></li>
                 
-            </li>
-        
-
-    
-        
-            <li class="toctree-l1 current">
-                <a class="current" href="./">User Interface</a>
+                    <li><a class="toctree-l4" href="#help-links">Help Links</a></li>
                 
-                    <ul>
-                    
-                        <li class="toctree-l3"><a href="#help-links">Help Links</a></li>
-                        
-                    
-                        <li class="toctree-l3"><a href="#process-bar">Process Bar</a></li>
-                        
-                    
-                        <li class="toctree-l3"><a href="#control-ui">Control UI</a></li>
-                        
-                            <li><a class="toctree-l4" href="#processes">Processes</a></li>
-                        
-                            <li><a class="toctree-l4" href="#temperatures">Temperatures</a></li>
-                        
-                            <li><a class="toctree-l4" href="#outputs">Outputs</a></li>
-                        
-                            <li><a class="toctree-l4" href="#inputs">Inputs</a></li>
-                        
-                    
-                    </ul>
+                    <li><a class="toctree-l4" href="#process-bar">Process Bar</a></li>
                 
-            </li>
-        
-
-    
-        
-            <li class="toctree-l1 ">
-                <a class="" href="../finder/">BCS Finder</a>
+                    <li><a class="toctree-l4" href="#main-control-ui">Main Control UI</a></li>
                 
-            </li>
+            
+            </ul>
         
-
-    
-</ul>
-
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../finder/">BCS Finder</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../utilities/">Online Utilities</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../main_control/">Main Control</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../data_log/">Datalog</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../process_editor/">Process Editor</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../temp_adjust/">Temp Setpoint Adjust</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../ladder_logic/">Ladder Logic</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../settings/">Settings</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../examples/">Configuration Examples</a>
+        
+    </li>
+<li>
+          
+        </ul>
       </div>
       &nbsp;
     </nav>
@@ -95,7 +149,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">BCS User Guide</a>
+        <a href="..">BCS 4.0 User Guide</a>
       </nav>
 
       
@@ -105,26 +159,34 @@
   <ul class="wy-breadcrumbs">
     <li><a href="..">Docs</a> &raquo;</li>
     
+      
+    
     <li>User Interface</li>
-      <li class="wy-breadcrumbs-aside">
-        
-      </li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
   </ul>
   <hr/>
 </div>
           <div role="main">
             <div class="section">
-              <h2 id="help-links">Help Links</h2>
-<p>By default, every section on the BCS UI has a ? next to it which contains a link to the relevant section in the manual.  This can be turned off using the Toggle Help link at the bottom of every page.</p>
+              
+                <h1 id="the-user-interface">The User Interface</h1>
+<p>This section will provide you with an overview of the user interface to assist your navigation on the various BCS screens.</p>
+<h2 id="help-links">Help Links</h2>
+<p>By default, every section on the BCS UI has a <img alt="question mark" src="../img/ui/question-mark.png" /> next to it which contains a link to the relevant section in the manual.  This feature can be toggled on and off using the Toggle Help link at the bottom of every page.</p>
+<p><img alt="toggle help" src="../img/ui/toggle-help.png" /></p>
 <h2 id="process-bar">Process Bar</h2>
-<p>The Process Bar appears on the left hand side of all pages in the BCS interface so you can always see which processes are currently running and provides access to the All Stop button.</p>
+<p>The Process Bar appears on the left hand side of all pages in the BCS interface so you can always see which processes are currently running and provides access to the All Stop button. </p>
 <p><img alt="process bar" src="../img/ui/process-bar.png" /> </p>
-<p>Processes can be started or stopped by clicking the process in the process bar.  The All Stop button will stop all processes and turn off all outputs that are currently on even if they are not being controlled by a process.</p>
-<p>The &lt; link below the process bar can be used to hide the process bar if it is not needed.  This can help with space restrictions on smaller screens.</p>
-<h2 id="control-ui">Control UI</h2>
-<p>The Control UI is the main interface for using the BCS. It displays the current temperature for all enabled temperature probes, information on running processes, the current status of all enabled outputs and inputs.</p>
+<p>Processes can be started or stopped by clicking the process in the process bar.  The All Stop button will stop all processes and turn off all outputs that are currently on even if they are not being controlled by a process. Multiple processes can run at the same time. The names of the processes can also be customized on the <a href="../process_editor/">Process Editor</a> page. A process is simply of set of rules that can control various outputs (such as pumps, burners, or valves) based on the feedback from inputs like temperature probes, or the state of other outputs.</p>
+<p>The '&lt;' link below the process bar can be used to hide the process bar if it is not needed.  This can help with space restrictions on smaller screens.</p>
+<h2 id="main-control-ui">Main Control UI</h2>
+<p>The Main Control UI is the main interface for using the BCS. It displays the current temperature for all enabled temperature probes, information on running processes, and the current status of all enabled outputs and inputs.</p>
 <p><img alt="control ui with process" src="../img/ui/control-ui-process.png" />
-<em>Above: Control UI with a running processes</em></p>
+<em>Above: Main Control UI with a running processes</em></p>
+<p>At the top of the Control UI is the navigation bar. Each of the individual pages of the BCS interface can be accessed from the navigation bar. Each of the pages on the navigation bar has its own corresponding page in this user guide.
+<img alt="navigation bar" src="../img/ui/nav-bar.png" /></p>
 <h3 id="processes">Processes</h3>
 <p>Running processes will be shown directly on the Control UI.  Processes can also be set up with an option so they are always displayed.</p>
 <p><img alt="running process" src="../img/ui/process-control.png" /></p>
@@ -163,6 +225,7 @@
 <h3 id="inputs">Inputs</h3>
 <p>Displays the current state of the inputs.</p>
 <p><img alt="inputs" src="../img/ui/inputs.png" /></p>
+              
             </div>
           </div>
           <footer>
@@ -180,9 +243,8 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>
     <!-- Copyright etc -->
-    </p>
+    
   </div>
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
@@ -197,15 +259,15 @@
 
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
-        
-      <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../finder/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../finder/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
     </span>
 </div>
 
-<!--
-MkDocs version  : 0.12.1
-Docs Build Date : 2015-04-18 00:01:27.850281
--->
 </body>
 </html>

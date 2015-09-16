@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Process Editor - BCS 4.0 User Guide</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Process Editor";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> BCS 4.0 User Guide</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../ui/">User Interface</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../finder/">BCS Finder</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../utilities/">Online Utilities</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../main_control/">Main Control</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../data_log/">Datalog</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Process Editor</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#process-editor">Process Editor</a></li>
+                
+                    <li><a class="toctree-l4" href="#editing-a-process">Editing a Process</a></li>
+                
+                    <li><a class="toctree-l4" href="#editing-a-state">Editing a State</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../temp_adjust/">Temp Setpoint Adjust</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../ladder_logic/">Ladder Logic</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../settings/">Settings</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../examples/">Configuration Examples</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">BCS 4.0 User Guide</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Process Editor</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="process-editor">Process Editor</h1>
+<p>The Process Editor page is where most of the configuration on the BCS happens. You can configure up to 8 processes with 8 states on each process. The status of processes, states, and timers are displayed in the Processes section of the <a href="../main_control/">Main Control</a> page.</p>
+<p><strong>Editing processes and states while they are running may produce erratic or undesirable results.</strong></p>
+<h2 id="editing-a-process">Editing a Process</h2>
+<p>You can give a process a new name by clicking the <strong>Rename</strong> button. Simply type in the you desire and hit the <strong>Enter</strong> key to save your changes.</p>
+<p>To run a process when the BCS starts up, check the <strong>Run on Startup</strong> check box. This setting is useful for applications like maintaining the temperature in a refrigerator or kegerator. If the BCS were to reboot because of a power failure, it would automatically start the process to continue maintaining the temperature when power is restored. For an example of this configuration, see the <a href="../examples/">Configuration Examples</a> page.</p>
+<p>The <strong>Display</strong> pulldown menu allows to choose when the process is shown on the <a href="../main_control/">Main Control</a> screen. Your choices are When <em>Running</em>, <em>Always</em>, and <em>Never</em>.</p>
+<p>The <strong>State</strong> pulldown menu allows you to choose which state you want to edit. Once you select a state, the state editing section will display on the this page.</p>
+<p><img alt="process editor" src="../img/process_editor/process_editor01.png" /></p>
+<h2 id="editing-a-state">Editing a State</h2>
+<p>When you select a state to edit, the state editor opens which contains several different sections.</p>
+<h3 id="state">State</h3>
+<p><img alt="state editor" src="../img/process_editor/state_editor.png" /></p>
+<p>In this section, you can give the state a name. For instance, if the purpose of the process is to set and hold a mash temperature, you might call this state "Hold Mash Temp". To change the state name, click in the <strong>State Name</strong> field and type the name you desire. The name will be automatically saved when you hit the <strong>Enter</strong> key or the <strong>Tab</strong> key.</p>
+<p>You can set an alarm to sound when the state is exited by choosing one from the <strong>Alarm when exiting state</strong> pulldown menu. Your choices are <em>None</em>, <em>Short</em>, and <em>Loop</em>. If you choose <em>None</em>, no alarm will sound. A <em>Short</em> alarm will only sound for 6 seconds. A <em>Loop</em> alarm will sound until you turn it off.</p>
+<p>The <strong>Send email on Alarm</strong> check box enables an email to be sent when the alarm is triggered. The destination email address can be configured on the <a href="../settings/">Settings</a> page.</p>
+<p>From the <strong>Start Processes</strong> row, you can choose which other processes you want to run when the state exit condition occurs. This is useful for chaining processes like starting your boil process when a certain mash state is exited.</p>
+<p>From the <strong>Stop Processes</strong> row, you can choose which processes you want to stop when the state exit condition occurs.</p>
+<p>From the Assert Registers row, you can utilize any ladder logic registers that you have configured on the <a href="../ladder_logic/">Ladder Logic</a> page. When you check the box to assert a register, that register will be turned on  (or asserted) when the state is active.</p>
+<h3 id="timers">Timers</h3>
+<p>The Timers section allows you to configure up to four timers to be associated with the state. The status of the timers will be displayed on the <a href="../main_control/">Main Control</a> page if enabled.</p>
+<p><img alt="timers" src="../img/process_editor/timers.png" /></p>
+<p>The <strong>Name</strong> column allows you to configure custom names for your timers. To change the name of the timer, type in the name you desire and hit the <strong>Enter</strong> key. The <strong>Used</strong> checkbox column allows you to designate whether or not the timer on that line will be used in the state. The <strong>Count Up</strong> column allows you to configure whether the timer will be a <em>count down</em> or <em>count up</em> timer. The <strong>Continue</strong> column allows to configure whether or not the timer will continue counting from the previous state. An example of continuing the timer would be a mash timer that transitions from the mash state to a recirculation state, but you want the timer to keep running. When the continue box is checked, the Initial Value field is not used. The <strong>Initial Value</strong> column is used to configure the starting amount of time for the timer. Time is expressed as H:MM:SS. Typically, the starting value for Count Up and/or continuous timers is 0:00:00. Count Down timers are configured for the amount of time you desire. As an example, a one hour mash timer would be configured as a Count Down timer and the value would be 1:00:00.</p>
+<h3 id="ramp-mode">Ramp Mode</h3>
+<p>Ramp mode allows you to program a rise or drop in temperature over time. This function is useful for dropping fermentation temperatures over time. As an example, a state that contains a ramp mode to cold crash a fermentor could be triggered after another timer based state that controlled the temperature during active fermentation.</p>
+<p><img alt="ramp mode" src="../img/process_editor/ramp_mode.png" /></p>
+<p>To enable ramp mode, check the <strong>Enabled</strong> box. You can associate the ramp mode profile with one or more outputs. To enable an output, check the box next to the output you want to enable. Use the <strong>Output Control (Configurable)</strong> section to associate the chosen output(s) with temp probes, SSRs, pumps, valves, etc. <em>If you are using ramp mode, your ramp mode temperatures will override any temperature settings that you configure for an associated output in the <strong>Output Control (Configurable)</strong> section.</em> Enter your starting temperature for ramp mode in the <strong>Start Temp</strong> box. Enter your finishing temperature in the <strong>End Temp</strong> box. Remember, you can use ramp mode to raise or lower temperatures over time. It all depends on your configuration and application. Enter the time over which you want to ramp from your starting temp to your end temp in the <strong>Time</strong> box. The time is expressed as HH:MM:SS.</p>
+<h3 id="output-control-configurable">Output Control (Configurable)</h3>
+<p>This section allows you to control the variables associated with outputs 0-7 for the selected state. </p>
+<p><img alt="output control configurable" src="../img/process_editor/output_control_configurable.png" /></p>
+<p>For each listed output (number of outputs is different for the BCS 460 and the BCS 462) you are presented with several options. The <strong>Mode</strong> column,the choices are <em>Direct</em>, <em>Duty Cycle</em>, <em>Hysteresis</em>, and <em>PID</em>. </p>
+<h4 id="direct-mode">Direct Mode</h4>
+<p>In <em>Direct</em> mode, the choices are to have the output either <em>on</em> or <em>off</em> when the state is active. When <em>Direct</em> mode is chosen, choose either the on or off radio button in the <strong>Setpoint</strong> column.</p>
+<p><img alt="direct mode" src="../img/process_editor/direct_mode.png" /></p>
+<h4 id="duty-cycle-mode">Duty Cycle Mode</h4>
+<p><em>Duty Cycle</em> mode is most useful for electric heating elements since they are more suited to cycling through numerous on/off cycles. This is as opposed to a freezer compressor which can be worn out in short order when cycled on and off multiple times in a short time frame. In Duty Cycle mode, the <strong>Setpoint</strong> column is used to set the percentage of time of the duty cycle that the output will be turned on. The duty cycle setpoint is a percentage of the configured <strong>Output Period</strong> that is configured for the selected output under <strong>PID Settings</strong> on the <a href="../settings/">Settings</a> page.</p>
+<p><img alt="duty cycle" src="../img/process_editor/duty_cycle.png" /></p>
+<h4 id="hysteresis-mode">Hysteresis Mode</h4>
+<p><em>Hysteresis</em> mode is used to maintain temperatures at a setpoint with an allowable amount of temperature swing above and/or below the setpoint. In <em>Hysteresis</em> mode, you can select whether the output will be used to <strong>Heat</strong> or <strong>Cool</strong> from the <strong>Heat/Cool</strong> pulldown menu. You can also select which <strong>Temperature Probe</strong> is used to measure temperature. Enter the desired <strong>Setpoint</strong> temperature. By default, the temperature is measured in Fahrenheit. The temperature setting for the BCS can be changed to Celsius on the <a href="../settings/">Settings</a> page. The <strong>Swing</strong> field is used to set that acceptable amount of temperature swing from the setpoint. In this example, a setpoint of 68 in Cool mode and a swing of 2 would result in the output to turn on at 70 and keep running until the temperature reached 68. Depending on use and outside factors (like ambient air temp), you will need to decide what the acceptable swing is balanced with the cycling of your heating or cooling system.</p>
+<p><img alt="hysteresis" src="../img/process_editor/hysteresis.png" /></p>
+<h4 id="pid-mode">PID Mode</h4>
+<p><em>PID</em> mode is able to provide a tighter temperature range variance than <em>Hysteresis</em> mode, but is not suitable for all applications. For instance, <em>PID</em> mode is not always suitable for controlling a freezer or refrigerator since it may cause the compressor to cycle too often. <em>PID</em> stands for proportional-integral-derivative. The <em>PID</em> algorithm is able to maintain a tighter temperature range without over-shooting the target temperature. The PID settings can be customized on the <a href="../settings/">Settings</a> page. In <em>PID</em> mode, you can select whether the output will be used to <strong>Heat</strong> or <strong>Cool</strong> from the <strong>Heat/Cool</strong> pulldown menu. You can also select which <strong>Temperature Probe</strong> is used to measure temperature. Enter the desired <strong>Setpoint</strong> temperature. By default, the temperature is measured in Fahrenheit. The temperature setting for the BCS can be changed to Celsius on the <a href="../settings/">Settings</a> page. </p>
+<p><img alt="pid mode" src="../img/process_editor/pid_mode.png" /></p>
+<h3 id="output-control-direct-onoff">Output Control (Direct On/Off)</h3>
+<p>This section allows you to directly turn outputs on or off when the state is active. This is useful for turning pumps on or off during mash recirculation or opening or closing glycol valves during fermenation. <em>This functionality is only available on the BCS 462</em>. To control an output, select the <strong>Enabled</strong> check box for the desired output. When an output is Enabled, you can then select whether the output will be on or off using the <strong>On/Off</strong> pulldown menu.</p>
+<p><img alt="output control direct" src="../img/process_editor/output_control_direct.png" /></p>
+<h3 id="exit-conditions">Exit Conditions</h3>
+<p>This section allows you to configure conditions that will cause the state to end. You can configure up to four exit conditions. The state will exit when any of the enabled conditions are met. To enable an exit condition, select the check box next to the exit condition row in the <strong>Enabled</strong> column. In the <strong>Source Type</strong> column, you can choose <em>Temp Probe</em>, <em>Timer</em>, or <em>Digital Input</em>. </p>
+<p>If the <strong>Source Type</strong> is <em>Temp Probe</em>, you can choose which temp probe to use under the <strong>Source</strong> column. Under the <strong>Condition</strong> column you can choose greater than or equal to (&gt;=) or less than or equal to (&lt;=). Under the <strong>Value</strong> column you can enter the desired temperature for the exit condition. By default, the temperature is measured in Fahrenheit. The temperature setting for the BCS can be changed to Celsius on the <a href="../settings/">Settings</a> page. In the <strong>Next State</strong> column you can choose what happens after the state exits. The choices are another state (<em>State #</em>), <em>Wait for Input</em>, or <em>Stop Process</em>. If you choose to exit to another state, that state will begin (the next step in brewing process, crash cool, etc.). If you choose <em>Wait for Input</em>, the process will continue, but you will be alerted that manual intervention is necessary. If you select <em>Stop Process</em>, the current process will end.</p>
+<p>If the <strong>Source Type</strong> is <em>Timer</em>, you can choose which timer to use under the Source column. Under the <strong>Condition</strong> column you can choose greater than or equal to (&gt;=) or less than or equal to (&lt;=). Under the <strong>Value</strong> column you can select the timer value (this will vary depending on if you selected a count down or count up timer). The time is expressed as H:MM:SS. In the <strong>Next State</strong> column you can choose what happens after the state exits. The choices are another state (<em>State #</em>), <em>Wait for Input</em>, or <em>Stop Process</em>. If you choose to exit to another state, that state will begin (the next step in brewing process, crash cool, etc.). If you choose <em>Wait for Input</em>, the process will continue, but you will be alerted that manual intervention is necessary. If you select <em>Stop Process</em>, the current process will end.</p>
+<p>If the <strong>Source Type</strong> is <em>Digital Input</em>, you can choose which DIN to use (as an example, this could be a push button or a toggle switch). In the <strong>Value</strong> column you can choose either <em>on</em> or <em>off</em> for the DIN. In the <strong>Next State</strong> column you can choose what happens after the state exits. The choices are another state (<em>State #</em>), <em>Wait for Input</em>, or <em>Stop Process</em>. If you choose to exit to another state, that state will begin (the next step in brewing process, crash cool, etc.). If you choose <em>Wait for Input</em>, the process will continue, but you will be alerted that manual intervention is necessary. If you select <em>Stop Process</em>, the current process will end.</p>
+<p><img alt="output control configurable" src="../img/process_editor/exit_conditions.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../temp_adjust/" class="btn btn-neutral float-right" title="Temp Setpoint Adjust"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../data_log/" class="btn btn-neutral" title="Datalog"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../data_log/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../temp_adjust/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

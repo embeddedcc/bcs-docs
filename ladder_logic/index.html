@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ladder Logic - BCS 4.0 User Guide</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Ladder Logic";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> BCS 4.0 User Guide</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../ui/">User Interface</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../finder/">BCS Finder</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../utilities/">Online Utilities</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../main_control/">Main Control</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../data_log/">Datalog</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../process_editor/">Process Editor</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../temp_adjust/">Temp Setpoint Adjust</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Ladder Logic</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#ladder-logic">Ladder Logic</a></li>
+                
+                    <li><a class="toctree-l4" href="#ladder-logic-defined">Ladder Logic Defined</a></li>
+                
+                    <li><a class="toctree-l4" href="#examples">Examples</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../settings/">Settings</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../examples/">Configuration Examples</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">BCS 4.0 User Guide</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Ladder Logic</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="ladder-logic">Ladder Logic</h1>
+<p>While programming processes can provide a robust method for programming complex interactions on the BCS, sometimes it is more efficient to use low level programming. That is what ladder logic provides. You do not have to use ladder logic, but if you do it supersedes any processes that have been configured. In addition, unlike processes, ladder logic is always running when the BCS is powered on.</p>
+<h2 id="ladder-logic-defined">Ladder Logic Defined</h2>
+<p>Ladder logic is based on Boolean functions such as AND and OR. Each rung has five slots. The first four slots are contacts and the last column is a coil. The coil slot is the result of the logic configured in the first four slots. Each slot must be filled with either a Process, Input, Output, Register, or Contact. The slots are connected to each other using Wires. Rungs are in groups of four. Rungs in the same group can be connected using wires. Rungs in different groups cannot be connected directly, but can be connected using Registers (explained below). When changes are made to the ladder logic, they are automatically saved and applied immediately.</p>
+<h3 id="wires">Wires</h3>
+<p>Wires are used to connect slots. In order for ladder logic to work, all the slots in a rung must be filled and all the slots must be connected using a wire. When a single rung is connected all the away across from left to right, the relationship between the slots is a logical AND. Slots can also connect via wires to slots above or below as long as they are in the same four rung group. When slots are connected vertically, the relationship between the slots is a logical OR. </p>
+<p>There are several different wire types to choose from to connect slots both horizontally and vertically. To add a wire between slots, simply drag and drop the desired wire from the right side menu to desired location on the ladder. To clear a previously applied wire connection, drag and drop the blank wire icon to the desired spot.</p>
+<p><img alt="wire icons" src="../img/ladder_logic/wires.png" /></p>
+<h3 id="contacts">Contacts</h3>
+<p>Contacts are used to fill slots when you do not need a register, DIN, output, or process to fill that slot. Remember, every slot in the rung must be filled with one of these variables, so contacts are very useful. To add a contact to a slot, simply drag the contact to the desired slot. To clear the contact, drag the blank contact icon to the slot.</p>
+<p><img alt="contact icons" src="../img/ladder_logic/contacts.png" /></p>
+<h3 id="registers">Registers</h3>
+<p>Register are internal virtual switches on the BCS. Registers can be normally open (NO) or normally closed (NC). Since registers are virtual switches, their status can be used to control other register, outputs, and processes. Registers can also be used to extend ladder logic between rungs, even if they are in another rung group. There are sixteen available registers, numbered 0-15. For more information on how registers can be used, see the examples later in this section.</p>
+<p><img alt="register icons" src="../img/ladder_logic/registers.png" /></p>
+<h3 id="inputs">Inputs</h3>
+<p>Inputs are the external discrete inputs (DINs) connected to the BCS. In ladder logic, each DIN can be either normally open (NO) or normally closed (NC). The dispostion of a DIN can control the status of registers, outputs, or processes. An input cannot be placed in the coil position. A common use of an input would be to use an external button or switch that in turn controls an output that will turn a pump on or off through ladder logic. For more information on how inputs can be used, see the examples later in this section.</p>
+<p><img alt="input icons" src="../img/ladder_logic/dins.png" /></p>
+<h3 id="outputs">Outputs</h3>
+<p>An output can be placed in a contact position (columns 1-4) or a coil position (column 5). Each output is available as normally open (NO) and normally closed (NC). While outputs are normally thought of as coils, they can also be used as contacts. See the examples below for more information. If the output is placed in the coil position and all the conditions are met in the contacts, then the output will either be turned on (NO) or off (NC).</p>
+<p><img alt="output icons" src="../img/ladder_logic/outputs.png" /></p>
+<h3 id="processes">Processes</h3>
+<p>Like outputs, processes can also be placed in either contact or coil slots on the ladder. This behavior is useful is you want to use one process to start or stop another process. Processes can also be started or stopped using and input. Each process is available as running (NO) or stopped (NC).  For more information on how processes can be used, see the examples later in this section.</p>
+<p><img alt="process icons" src="../img/ladder_logic/processes.png" /></p>
+<h2 id="examples">Examples</h2>
+<p>Below are some common configuration examples using ladder logic. Use the examples below to help build out your ladder logic based on how you use your BCS. Remember, ladder logic takes precedence over any processes that are running. If you have a process running that has an output turned off, but that same output is turned on in ladder logic, then the output will be turned on.</p>
+<h3 id="example-1-controlling-two-outputs-with-one-input">Example 1 - Controlling Two Outputs with One Input</h3>
+<p>In this example input 0 (DIN 0) is used to control two different outputs - OUT 1 and OUT 2. In the normally open position on Rung 0, OUT 1 will be turned on. On Rung 1, when DIN 0 is in the normally closed position, OUT 2 will be turned on. In this example, the first column is populated with the appropriate input. The spaces between the columns are filled with wires, and the desired output is placed in the last, or coil, position.</p>
+<p><img alt="example 1" src="../img/ladder_logic/example_01.png" /></p>
+<h3 id="example-2-logical-and">Example 2 - Logical AND</h3>
+<p>To create a logical AND function between two or more variables, place them in series. In the example below, if both DIN 1 and DIN 2 are NO, the OUT 3 will be NO (or turned on).</p>
+<p><img alt="example 2" src="../img/ladder_logic/example_02.png" /></p>
+<h3 id="example-3-logical-or">Example 3 - Logical OR</h3>
+<p>To create a logical OR between variables, place them in parallel. In the example below, if either output 5, 6, or 7 is on, then output 9 will also be on. In this particular example, outputs 5, 6, and 7 are all motorized ball valves that control the flow of coolant in a jacketed conical. Output 9 is a pump the circulates the coolant. The result of this ladder logic is that if any of the ball valves are open, then the pump will turn on. The valves are controlled by a process that is configured to control the fermentation temperatures of the jacketed conicals.</p>
+<p><img alt="example 3" src="../img/ladder_logic/example_03.png" /></p>
+<h3 id="example-4-alarm-to-register-10">Example 4 - Alarm To Register 10</h3>
+<p>Another option is to use Register 10 to sound an alarm. This can be configured on the <a href="../settings/">Settings</a> page under General Settings by checking the <strong>Alarm to Register 10</strong> box. This will activate Register 10 any time an alarm is set to sound as a result of processes. In this example, NO Register 10 is in the first slot and is connected via wires and contacts to NO Output 8 in the coil position. When Register 10 is turned on, Output 8 is turned on.</p>
+<p><img alt="example 4" src="../img/ladder_logic/example_04.png" /> </p>
+<h3 id="example-5-starting-a-process-with-an-input">Example 5 - Starting a Process With an Input</h3>
+<p>In this example, you can connect a two-way switch to a DIN to start or stop a process.</p>
+<p><img alt="example 5" src="../img/ladder_logic/example_05.png" /></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../settings/" class="btn btn-neutral float-right" title="Settings"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../temp_adjust/" class="btn btn-neutral" title="Temp Setpoint Adjust"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../temp_adjust/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../settings/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
