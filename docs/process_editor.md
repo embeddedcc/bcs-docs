@@ -37,7 +37,7 @@ From the **Stop Processes** row, you can choose which processes you want to stop
 
 From the Assert Registers row, you can utilize any ladder logic registers that you have configured on the [Ladder Logic](ladder_logic.md) page. When you check the box to assert a register, that register will be turned on  (or asserted) when the state is active.
 
-### Timers ###
+### Timers  <a name="timers"></a> ###
 
 The Timers section allows you to configure up to four timers to be associated with the state. The status of the timers will be displayed on the [Main Control](main_control.md) page if enabled.
 
@@ -45,7 +45,7 @@ The Timers section allows you to configure up to four timers to be associated wi
 
 The **Name** column allows you to configure custom names for your timers. To change the name of the timer, type in the name you desire and hit the **Enter** key. The **Used** checkbox column allows you to designate whether or not the timer on that line will be used in the state. The **Count Up** column allows you to configure whether the timer will be a *count down* or *count up* timer. The **Continue** column allows to configure whether or not the timer will continue counting from the previous state. An example of continuing the timer would be a mash timer that transitions from the mash state to a recirculation state, but you want the timer to keep running. When the continue box is checked, the Initial Value field is not used. The **Initial Value** column is used to configure the starting amount of time for the timer. Time is expressed as H:MM:SS. Typically, the starting value for Count Up and/or continuous timers is 0:00:00. Count Down timers are configured for the amount of time you desire. As an example, a one hour mash timer would be configured as a Count Down timer and the value would be 1:00:00.
 
-### Ramp Mode ###
+### Ramp Mode <a name="ramp-mode"></a> ###
 
 Ramp mode allows you to program a rise or drop in temperature over time. This function is useful for dropping fermentation temperatures over time. As an example, a state that contains a ramp mode to cold crash a fermentor could be triggered after another timer based state that controlled the temperature during active fermentation.
 
@@ -53,7 +53,7 @@ Ramp mode allows you to program a rise or drop in temperature over time. This fu
 
 To enable ramp mode, check the **Enabled** box. You can associate the ramp mode profile with one or more outputs. To enable an output, check the box next to the output you want to enable. Use the **Output Control (Configurable)** section to associate the chosen output(s) with temp probes, SSRs, pumps, valves, etc. *If you are using ramp mode, your ramp mode temperatures will override any temperature settings that you configure for an associated output in the **Output Control (Configurable)** section.* Enter your starting temperature for ramp mode in the **Start Temp** box. Enter your finishing temperature in the **End Temp** box. Remember, you can use ramp mode to raise or lower temperatures over time. It all depends on your configuration and application. Enter the time over which you want to ramp from your starting temp to your end temp in the **Time** box. The time is expressed as HH:MM:SS.
 
-### Output Control (Configurable) ###
+### Output Control (Configurable) <a name="output-control-configurable"></a> ###
 
 This section allows you to control the variables associated with outputs 0-7 for the selected state. 
 
@@ -81,13 +81,13 @@ In *Direct* mode, the choices are to have the output either *on* or *off* when t
 
 ![pid mode](img/process_editor/pid_mode.png)
 
-### Output Control (Direct On/Off) ###
+### Output Control (Direct On/Off) <a name="output-control-direct"></a> ###
 
 This section allows you to directly turn outputs on or off when the state is active. This is useful for turning pumps on or off during mash recirculation or opening or closing glycol valves during fermenation. *This functionality is only available on the BCS 462*. To control an output, select the **Enabled** check box for the desired output. When an output is Enabled, you can then select whether the output will be on or off using the **On/Off** pulldown menu.
 
 ![output control direct](img/process_editor/output_control_direct.png)
 
-### Exit Conditions ###
+### Exit Conditions <a name="exit-conditions"></a> ###
 
 This section allows you to configure conditions that will cause the state to end. You can configure up to four exit conditions. The state will exit when any of the enabled conditions are met. To enable an exit condition, select the check box next to the exit condition row in the **Enabled** column. In the **Source Type** column, you can choose *Temp Probe*, *Timer*, or *Digital Input*. 
 
