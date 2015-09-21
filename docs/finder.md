@@ -2,6 +2,17 @@
 
 The BCS finder is a small utility which uses a UDP based locator protocol to find BCS devices on the local network.  It will only work if it is run from a computer on the same network as the BCS.
 
+If the finder utility does not locate your BCS, you likely have an underlying networking problem that must be resolved.
+  
+Examples include:
+
+
+- The BCS is not physically on the same network segment as your computer.
+- Your network router is not supplying DHCP addresses to new clients on your network.
+- Your network router is supplying DHCP addresses that are not defined on the same segment as the current settings of your computer.
+- You have configured an incompatible static IP address in the BCS via the [Settings](settings.md) page.
+
+
 ## Download
 
 * [BCS Finder for Mac](https://www.dropbox.com/s/7n8nh66sl6pjm9q/BCS%20Finder%20-%20Mac.zip?dl=0)

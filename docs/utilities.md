@@ -1,7 +1,14 @@
 # Online Utilities 
 
 ## Recipes
-The [Recipes utility](http://lawn-chair.github.io/bcs-recipes/) allows you to manually configure recipe variables such as strike water temperature on your BCS. This functionality allows you to modify processes to fit each individual beer that you brew. 
+The [Recipes utility](http://lawn-chair.github.io/bcs-recipes/) allows you to quickly reconfigure your BCS processes/states with new temperatures and times without having to edit each process/state.  You can create variables such as strike water temperature, mash temperature, mash time, etc.  You can then quickly change these values and the utility will update each location within your BCS programming where you are using that variable.  
+On the **Variable Setup** tab, click the "**+**" icon to add a new variable.  You need to assign a name to the variable and then select the process, state and item that the variable will be updating.  Click the **Save** button to save your changes. If you have a temperature such as your strike water temperature that is used in multiple places (e.g. heat to 168 and exit that state when 168 is met), you can define both entries using the same variable name.  This will make it so you only need to enter the value once, but it will change it in multiple locations (see examples below).
+
+![variable setup](img/backup/variable_setup.png)
+
+Once your variable definitions are created, you only need to utilize the **Recipe Values** tab when you want to change the values.  Common things to put in the variables include strike temp, sparge temp, mash temp, mash time, and boil time.
+
+![recipe values](img/backup/recipe_values.png)
 
 ## Backup/Restore
 The [Backup/Restore utility](http://lawn-chair.github.io/bcs-backup/) allows you to save your settings and/or your processes to a local drive on your computer. **The Backup/Restore utility only works when Authentication is disabled on the BCS. Authentication can be disabled on the [Settings](settings.md) page.**
