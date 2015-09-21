@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Main Control - BCS 4.0 User Guide</title>
+  <title>Developer Resources - BCS 4.0 User Guide</title>
   
 
   <link rel="shortcut icon" href="../img/favicon.ico">
@@ -72,23 +72,8 @@
 
     
         
-            <li class="toctree-l1 current">
-                <a class="current" href="./">Main Control</a>
-                
-                    <ul>
-                    
-                        <li class="toctree-l3"><a href="#main-control">Main Control</a></li>
-                        
-                            <li><a class="toctree-l4" href="#current-temperatures">Current Temperatures</a></li>
-                        
-                            <li><a class="toctree-l4" href="#processes">Processes</a></li>
-                        
-                            <li><a class="toctree-l4" href="#outputs">Outputs</a></li>
-                        
-                            <li><a class="toctree-l4" href="#inputs">Inputs</a></li>
-                        
-                    
-                    </ul>
+            <li class="toctree-l1 ">
+                <a class="" href="../main_control/">Main Control</a>
                 
             </li>
         
@@ -151,8 +136,17 @@
 
     
         
-            <li class="toctree-l1 ">
-                <a class="" href="../developers/">Developer Resources</a>
+            <li class="toctree-l1 current">
+                <a class="current" href="./">Developer Resources</a>
+                
+                    <ul>
+                    
+                        <li class="toctree-l3"><a href="#developer-resources">Developer Resources</a></li>
+                        
+                            <li><a class="toctree-l4" href="#api-docs">API Docs</a></li>
+                        
+                    
+                    </ul>
                 
             </li>
         
@@ -179,7 +173,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="..">Docs</a> &raquo;</li>
     
-    <li>Main Control</li>
+    <li>Developer Resources</li>
       <li class="wy-breadcrumbs-aside">
         
       </li>
@@ -188,28 +182,18 @@
 </div>
           <div role="main">
             <div class="section">
-              <h1 id="main-control">Main Control</h1>
-<p>The Main Control is the primary page used for controlling processes, observing temperatures, as well as controlling inputs and outputs.</p>
-<h2 id="current-temperatures">Current Temperatures</h2>
-<p>The Current Temperatures are displayed here for all active temperature probes. Temperatures can be displayed in three different styles - LED, Dial, or Compact. The display style is chosen using the pull-down menu in the upper right corner of the screen.</p>
-<p><img alt="temp style" src="../img/main/temp_style.png" /></p>
-<p>The names of the temperature probes and whether or not a probe is active can be customized on the <a href="../settings/">Settings</a> page.</p>
-<h2 id="processes">Processes</h2>
-<p>The Processes section displays all running processes. The current state of the process is shown in green. In addition, processes can be manually paused or manually put into another state. A process is simply a series of states that are strung together. States are the basic building blocks of BCS programming. States can contain timers, temperature set points, trigger other processes, trigger alarms, and control outputs such as pumps, valves, and burners. Each process can have up to eight states. Processes and their associated states can be configured on the <a href="../process_editor/">Process Editor</a> page.</p>
-<h2 id="outputs">Outputs</h2>
-<p>The Outputs section displays the enabled outputs. Asserted outputs are shown in green. You can also manually turn outputs on and off by clicking on the name of the output. An output is simply any device that can be turned on and off by the BCS like a valve, pump, or solid state relay (SSR). The output numbers  in the BCS interface correspond to the output numbers physically shown on the BCS box. The names of the outputs and whether or not an output is enabled can be configured on the <a href="../settings/">Settings</a> page.</p>
-<h2 id="inputs">Inputs</h2>
-<p>The Inputs section displays the enabled discrete inputs (DINs) on the BCS. Inputs that are currently active will be displayed in green. Inputs can be configured on the <a href="../settings/">Settings</a> page.</p>
+              <h1 id="developer-resources">Developer Resources</h1>
+<p>This page contains resources for developers that want to learn more about the inner workings of the BCS and/or want to develop custom applications and interfaces.</p>
+<h2 id="api-docs">API Docs</h2>
+<p>The API documentation can be found <a href="http://www.embeddedcc.com/api-docs/">here</a>.</p>
             </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../data_log/" class="btn btn-neutral float-right" title="Datalog"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../utilities/" class="btn btn-neutral" title="Online Utilities"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../wiring/" class="btn btn-neutral" title="Wiring Examples"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -235,14 +219,14 @@
 <div class="rst-versions" role="note" style="cursor: pointer">
     <span class="rst-current-version" data-toggle="rst-current-version">
         
-      <span><a href="../utilities/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../data_log/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../wiring/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 
 <!--
 MkDocs version  : 0.12.2
-Docs Build Date : 2015-09-21 22:07:13.923036
+Docs Build Date : 2015-09-21 22:07:14.042558
 -->
 </body>
 </html>
