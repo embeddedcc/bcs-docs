@@ -12,6 +12,8 @@ pages:
 - [ladder_logic.md, Ladder Logic]
 - [settings.md, Settings]
 - [examples.md, Configuration Examples]
+- [wiring.md, Wiring Examples]
+- [developers.md, Developer Resources]
 
 
 theme: readthedocs
