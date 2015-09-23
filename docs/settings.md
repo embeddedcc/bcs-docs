@@ -4,7 +4,7 @@ The Settings page allows you to customize settings and perform administrative ta
 
 ## Device Settings & Info
 
-This section allows you to customize the name of your BCS and view the current version of the firmware that is loaded on the BCS. To change the name of your BCS, simply type in the name you desire then hit the TAB key. The name is saved automatically.
+This section allows you to customize the name of your BCS and view the current version of the firmware that is loaded on the BCS. To change the name of your BCS, simply type in the name you desire then hit the TAB key. The name is saved automatically. The BCS Utilities link will take you to the online utilities web site. See the [Online Utilities](utilities.md) section for more information.
 
 ![device settings](\img\settings\device_settings.png)
 
