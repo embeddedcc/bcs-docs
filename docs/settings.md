@@ -73,9 +73,15 @@ LED display devices can be added to the BCS by connecting them to the **EXP0** a
 ## Networking
 In order to access the BCS over a network, the BCS must have a valid IP address. The easiest way to accomplish this is to use DHCP to automatically assign an IP address. DHCP is enabled by default, so if you have a router or DHCP server on your network, the BCS will be assigned an IP address. To find the IP address that was assigned to your BCS, you can either look on your router or DHCP server to see which IP address was assigned to the BCS *MAC Address*. You can also use the [BCS Finder](finder.md).
 
-To manually assign an IP address to your BCS, uncheck the *DHCP Enabled* box, enter you IP address information in the **Advanced** section, and click on the **Update Network Settings** button.
+Before you can make changes to your network settings, you must first click on the **Update Network Settings** button. This will enable the ability to edit the network settings. After you make your changes, click on the **Reset BCS** button for the changes to take effect.
 
 ![networking](/img/settings/network_settings.png)
+
+If you are using port forwarding, you may want to use a non-standard TCP port on the BCS. To change the port assignment, use the up and down arrows in the **Port** box.
+
+To manually assign an IP address to your BCS, uncheck the *DHCP Enabled* box, enter you IP address information in the **Advanced** section, and click on the **Reset BCS** button.
+
+![networking2](/img/settings/network_settings2.png)
 
 ## Firmware Upgrade
 To upgrade your BCS to the latest firmware, you must use TFTP which is a simple program used to transfer files on the local network. There are several free TFTP servers available on the Internet. Download the firmware file to your computer and follow the instructions for setting up your chose TFTP server. Enter the IP address of your TFTP server in the IP Address box and click the **Upgrade** button. Once the download is complete, the BCS will take a few minutes to install the upgrade and reboot. Be sure to back-up your configuration before you upgrade.
