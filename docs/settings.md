@@ -84,7 +84,7 @@ To manually assign an IP address to your BCS, uncheck the *DHCP Enabled* box, en
 ![networking2](/img/settings/network_settings2.png)
 
 ## Firmware Upgrade
-To upgrade your BCS to the latest firmware, you must use TFTP which is a simple program used to transfer files on the local network. There are several free TFTP servers available on the Internet. Download the firmware file to your computer and follow the instructions for setting up your chose TFTP server. Enter the IP address of your TFTP server in the IP Address box and click the **Upgrade** button. Once the download is complete, the BCS will take a few minutes to install the upgrade and reboot. Be sure to back-up your configuration before you upgrade.
+To upgrade your BCS to the latest firmware, you must use TFTP which is a simple program used to transfer files on the local network. There are several free TFTP servers available on the Internet. Download the firmware file to your computer and follow the instructions for setting up your chosen TFTP server. Enter the IP address of your TFTP server in the IP Address box and click the **Upgrade** button. Once the download is complete, the BCS will take a few minutes to install the upgrade and reboot. Be sure to back-up your configuration before you upgrade.
 
 ![firmware upgrade](/img/settings/firmware.png)
 
