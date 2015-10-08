@@ -188,6 +188,52 @@
             <div class="section">
               <h1 id="configuration-examples">Configuration Examples</h1>
 <h2 id="example-1-refrigerator-temp-control">Example 1 - Refrigerator Temp Control</h2>
+<p>This is a very simple example for controlling the temperature in a refrigerator or freezer that you are using as a kegerator or keezer (refrigerator or freezer used to store and serve beer from kegs). The same example process can also be used to control fermentation temperatures if you are using a refrigerator or freezer as a fermentation chamber. To prevent wear and tear on your refrigeration equipment, it is a good idea to use a <a href="http://www.brewershardware.com/Thermowells/">thermowell</a> to protect your <a href="http://www.brewershardware.com/BCS-460-Temperature-Sensors/">temperature probe</a> and submerge it in a volume of liquid (such as a gallon jug of water or inside your fermentation vessel) to prevent unwanted temperature swings and unnecessary cycling.</p>
+<ol>
+<li>
+<p>While technically optional, it is a best practice to name your temperature probes so they can be easily identifiable by location or function rather than number. From the <a href="../settings/">Settings</a> page, go to the Temperature Probes section and name and enable any temperature probes you are going to use in your BCS deployment. In this case, Temp Probe 7 is has been named Keezer and it has been enabled. For examples of how to connect the temp probes to the BCS, see the <a href="../wiring/">Wiring Examples</a> page.
+<img alt="temp probe naming" src="../img/examples/example1_1.png" /></p>
+</li>
+<li>
+<p>The next step is to name your output that will control your refrigerator or freezer. From the <a href="../settings/">Settings</a> page, go to the Outputs sections to name and enable the output that will control the power supply to the refrigerator. In most cases, this will be a solid state relay (SSR). For examples of how to connect an SSR to the BCS, see the <a href="../wiring/">Wiring Examples</a> page.
+<img alt="output naming" src="../img/examples/example1_2.png" /></p>
+</li>
+<li>
+<p>Now that you have named and enabled your temp probe and your output, you can configure the process to control your refrigerator. Go to the <a href="../process_editor/">Process Editor</a> page on the BCS interface. Select an unused process from the pulldown menu. Click on the <strong>Rename</strong> button and enter a new name for your process so that it can be identified. In this case, the process is named <em>Keezer</em>. For this process, it is a good idea to check the <strong>Run on Startup</strong> box. This enables this process to start automatically when the BCS powers up. If the BCS temporarily loses power, the process will begin automatically so you don't come home to warm beer.
+<img alt="process naming" src="../img/examples/example1_3.png" /></p>
+</li>
+<li>
+<p>From the <strong>State</strong> pulldown menu, choose <strong>State 0</strong>. Also, choose to dislay this process when it is running to show the process on the Main Control page.
+<img alt="choosing a state" src="../img/examples/example1_4.png" /></p>
+</li>
+<li>
+<p>State 0 will be the initial state of this process when it begins. Since you are choosing to start this process when the BCS starts up, you want to build in some protection for our refrigerator if there is an instance when the power supply to the BCS becomes unreliable. To do this, you will create an initialization period that will cause the BCS to wait 5 minutes before it enters the next state which will actually control the temperature. In the State section, enter the <strong>State Name</strong> of <strong>Initialize</strong>.
+<img alt="state naming" src="../img/examples/example1_5.png" /></p>
+</li>
+<li>
+<p>Go to the <strong>Timers</strong> section to setup the delay timer. Enter a name for the delay timer, check the <strong>Used</strong> box, and set the initial value to 5 minutes. Because you did not check any other boxes, this will be a countdown timer.
+<img alt="timer naming" src="../img/examples/example1_6.png" /></p>
+</li>
+<li>
+<p>Once your delay timer expires, you want to start the state that will be responsible for controlling the temperature. To do this, go to the <strong>Exit Conditions</strong> section. On the first exit condition line, check the <strong>Enabled</strong> box. Choose <strong>Timer</strong> as the <strong>Source Type</strong>. For the <strong>Source</strong>, select the name of the delay timer that you configured in the previous step. For the <strong>Condition</strong>, select "<strong>&lt;=</strong>". Leave the <strong>Value</strong> as as 0:00:00. Select <strong>State 1</strong> as the <strong>Next State</strong> (you will configure that next).
+<img alt="exit conditions" src="../img/examples/example1_7.png" /></p>
+</li>
+<li>
+<p>Scroll to the top of the Process Editor page and select <strong>State 1</strong> in your <em>Keezer</em> process. Name this state <strong>Cool</strong>.
+<img alt="state 2" src="../img/examples/example1_8.png" />.</p>
+</li>
+<li>
+<p>In the <strong>Timers</strong> section, add a timer for this state that will show how long this state has been running. Name the timer <strong>Elapsed Time</strong> and check the <strong>Used</strong>, <strong>Count Up</strong>, and <strong>Continue</strong> boxes. Leave the <strong>Initial Value</strong> as <strong>0:00:00</strong>.
+<img alt="elapsed timer" src="../img/examples/example1_9.png" />.</p>
+</li>
+<li>
+<p>In the <strong>Output Control (Configurable)</strong> section, configure your Keezer output to maintain the temperature you desire. Earlier, you configured an output and a temp probe with easy to remember names and now it is time to put those to use. From the Keezer line (or whatever name you created earlier), choose <strong>Hysteresis</strong> in the <strong>Mode</strong> column. Select <strong>Cool</strong> in the <strong>Heat/Cool</strong> column. Select Keezer as your Temperature Probe. Enter your temperature <strong>Setpoint</strong> and your <strong>Swing</strong>. The Setpoint is your target temperature. In Cool mode, the Setpoint is the lowest temperature you want to reach. The Swing determines how many degrees above (in Cool mode) the setpoint the temperature will be allowed to be before the output is triggered to begin cooling the refrigerator. In this example, a Setpoint of 35 and a swing means that the temperature will be maintained between 35 and 37 degrees. 
+<img alt="output control" src="../img/examples/example1_10.png" />.</p>
+</li>
+<li>
+<p>You can optionally configure another state that will sound an alarm if the Setpoint is exceeded. The Exit Condition for that state will be to return to the Cool state.</p>
+</li>
+</ol>
 <h2 id="example-2-fermentation-control">Example 2 - Fermentation Control</h2>
 <h2 id="example-3-mashtun-temp-control">Example 3 - Mashtun Temp Control</h2>
             </div>
@@ -232,7 +278,7 @@
 
 <!--
 MkDocs version  : 0.12.2
-Docs Build Date : 2015-09-30 19:45:49.831062
+Docs Build Date : 2015-10-08 15:49:13.146314
 -->
 </body>
 </html>
