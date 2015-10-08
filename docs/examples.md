@@ -28,6 +28,7 @@ This is a very simple example for controlling the temperature in a refrigerator 
 8. Scroll to the top of the Process Editor page and select **State 1** in your *Keezer* process. Name this state **Cool**.
 ![state 2](img/examples/example1_8.png).
 
+
 9. In the **Timers** section, add a timer for this state that will show how long this state has been running. Name the timer **Elapsed Time** and check the **Used**, **Count Up**, and **Continue** boxes. Leave the **Initial Value** as **0:00:00**.
 ![elapsed timer](img/examples/example1_9.png).
 
