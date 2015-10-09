@@ -26,14 +26,14 @@ This is a very simple example for controlling the temperature in a refrigerator 
 ![exit conditions](img/examples/example1_7.png)
 
 8. Scroll to the top of the Process Editor page and select **State 1** in your *Keezer* process. Name this state **Cool**. 
-![state 2](img/examples/example1_8.png).
+![state 2](img/examples/example1_8.png)
 
 
 9. In the **Timers** section, add a timer for this state that will show how long this state has been running. Name the timer **Elapsed Time** and check the **Used**, **Count Up**, and **Continue** boxes. Leave the **Initial Value** as **0:00:00**.
-![elapsed timer](img/examples/example1_9.png).
+![elapsed timer](img/examples/example1_9.png)
 
-10. In the **Output Control (Configurable)** section, configure your Keezer output to maintain the temperature you desire. Earlier, you configured an output and a temp probe with easy to remember names and now it is time to put those to use. From the Keezer line (or whatever name you created earlier), choose **Hysteresis** in the **Mode** column. Select **Cool** in the **Heat/Cool** column. Select Keezer as your Temperature Probe. Enter your temperature **Setpoint** and your **Swing**. The Setpoint is your target temperature. In Cool mode, the Setpoint is the lowest temperature you want to reach. The Swing determines how many degrees above (in Cool mode) the setpoint the temperature will be allowed to be before the output is triggered to begin cooling the refrigerator. In this example, a Setpoint of 35 and a swing means that the temperature will be maintained between 35 and 37 degrees. 
-![output control](img/examples/example1_10.png).
+10. In the **Output Control (Configurable)** section, configure your Keezer output to maintain the temperature you desire. Earlier, you configured an output and a temp probe with easy to remember names and now it is time to put those to use. From the Keezer line (or whatever name you created earlier), choose **Hysteresis** in the **Mode** column. Select **Cool** in the **Heat/Cool** column. Select Keezer as your Temperature Probe. Enter your temperature **Setpoint** and your **Swing**. The Setpoint is your target temperature. In Cool mode, the Setpoint is the temperature at which the BCS will turn off the associated output. The Swing determines how many degrees above (in Cool mode) the setpoint the temperature will be allowed to be before the output is triggered to begin cooling the refrigerator. In this example, a Setpoint of 35 and a swing means that the temperature will be maintained between 35 and 37 degrees. Of course, your results may vary depending on the placement of the temperature probe, the volume of liquid being cooled and other factors.
+![output control](img/examples/example1_10.png)
 
 11. You can optionally configure another state that will sound an alarm if the Setpoint is exceeded. The Exit Condition for that state will be to return to the Cool state.
 
