@@ -16,7 +16,7 @@ This is a very simple example for controlling the temperature in a refrigerator 
 4. From the **State** pulldown menu, choose **State 0**. Also, choose to dislay this process when it is running to show the process on the Main Control page.
 ![choosing a state](img/examples/example1_4.png)
 
-5. State 0 will be the initial state of this process when it begins. Since you are choosing to start this process when the BCS starts up, you want to build in some protection for our refrigerator if there is an instance when the power supply to the BCS becomes unreliable. To do this, you will create an initialization period that will cause the BCS to wait 5 minutes before it enters the next state which will actually control the temperature. In the State section, enter the **State Name** of **Initialize**.
+5. State 0 will be the initial state of this process when it begins. Since you are choosing to start this process when the BCS starts up, you want to build in some protection for your refrigerator if there is an instance when the power to the BCS becomes unreliable due to blackouts or brownouts. To do this, you will create an initialization period that will cause the BCS to wait 5 minutes before it enters the next state which will actually control the temperature. In the State section, enter the **State Name** of **Initialize**.
 ![state naming](img/examples/example1_5.png)
 
 6. Go to the **Timers** section to setup the delay timer. Enter a name for the delay timer, check the **Used** box, and set the initial value to 5 minutes. Because you did not check any other boxes, this will be a countdown timer.
@@ -25,7 +25,7 @@ This is a very simple example for controlling the temperature in a refrigerator 
 7. Once your delay timer expires, you want to start the state that will be responsible for controlling the temperature. To do this, go to the **Exit Conditions** section. On the first exit condition line, check the **Enabled** box. Choose **Timer** as the **Source Type**. For the **Source**, select the name of the delay timer that you configured in the previous step. For the **Condition**, select "**<=**". Leave the **Value** as as 0:00:00. Select **State 1** as the **Next State** (you will configure that next).
 ![exit conditions](img/examples/example1_7.png)
 
-8. Scroll to the top of the Process Editor page and select **State 1** in your *Keezer* process. Name this state **Cool**.
+8. Scroll to the top of the Process Editor page and select **State 1** in your *Keezer* process. Name this state **Cool**. 
 ![state 2](img/examples/example1_8.png).
 
 
