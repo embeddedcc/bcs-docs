@@ -15,9 +15,9 @@ Examples include:
 
 ## Download
 
-* [BCS Finder for Mac](https://www.dropbox.com/s/7n8nh66sl6pjm9q/BCS%20Finder%20-%20Mac.zip?dl=0)
-* [BCS Finder for Windows (MSI Installer)](https://www.dropbox.com/s/7mh5kpm3xabnnp5/BCS%20Finder-1.0-win32.msi?dl=0)
-* [BCS Finder for Windows (Zip File)](https://www.dropbox.com/s/5w8teos0x7gg9lo/BCS%20Finder.zip?dl=0)
+* [BCS Finder for Mac](http://www.embeddedcc.com/finder/BCS%20Finder%20-%20Mac.zip)
+* [BCS Finder for Windows (MSI Installer)](http://www.embeddedcc.com/finder/BCS%20Finder-1.0-win32.msi)
+* [BCS Finder for Windows (Zip File)](http://www.embeddedcc.com/finder/BCS%20Finder.zip)
 
 BCS Finder has been tested on Linux Mint running from the source code.  Please see the README for information on running under Linux.
 
