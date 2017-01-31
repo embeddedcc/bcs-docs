@@ -5,7 +5,7 @@ While programming processes can provide a robust method for programming complex 
 
 ## Ladder Logic Defined
 
-Ladder logic is based on Boolean functions such as AND and OR. Each rung has five slots. The first four slots are contacts and the last column is a coil. The coil slot is the result of the logic configured in the first four slots. Each slot must be filled with either a Process, Input, Output, Register, or Contact. The slots are connected to each other using Wires. Rungs are in groups of four. Rungs in the same group can be connected using wires. Rungs in different groups cannot be connected directly, but can be connected using Registers (explained below). When changes are made to the ladder logic, they are automatically saved and applied immediately.
+Ladder logic is based on Boolean functions such as **AND** and **OR**. Each rung has five slots. The first four slots are contacts and the last column is a coil. The coil slot is the result of the logic configured in the first four slots. Each slot must be filled with either a Process, Input, Output, Register, or Contact. The slots are connected to each other using Wires. Rungs are in groups of four. Rungs in the same group can be connected using wires. Rungs in different groups cannot be connected directly, but can be connected using Registers (explained below). When changes are made to the ladder logic, they are automatically saved and applied immediately.
 
 
 ### Wires
@@ -26,7 +26,7 @@ Contacts are used to fill slots when you do not need a register, DIN, output, or
 
 ### Registers
 
-Register are internal virtual switches on the BCS. Registers can be normally open (NO) or normally closed (NC). Since registers are virtual switches, their status can be used to control other register, outputs, and processes. Registers can also be used to extend ladder logic between rungs, even if they are in another rung group. There are sixteen available registers, numbered 0-15. For more information on how registers can be used, see the examples later in this section.
+Register are internal virtual switches on the BCS. Registers can be normally open (NO) or normally closed (NC). Since registers are virtual switches, their status can be used to control other registers, outputs, and processes. Registers can also be used to extend ladder logic between rungs, even if they are in another rung group. There are sixteen available registers, numbered 0-15. For more information on how registers can be used, see the examples later in this section.
 
 ![register icons](img/ladder_logic/registers.png)
 
@@ -51,7 +51,7 @@ Like outputs, processes can also be placed in either contact or coil slots on th
 
 
 ## Examples ##
-Below are some common configuration examples using ladder logic. Use the examples below to help build out your ladder logic based on how you use your BCS. Remember, ladder logic takes precedence over any processes that are running. If you have a process running that has an output turned off, but that same output is turned on in ladder logic, then the output will be turned on.
+Below are some common configuration examples using ladder logic. Use the examples below to help build out your ladder logic based on how you use your BCS. *Remember, ladder logic takes precedence over any processes that are running. If you have a process running that has an output turned off, but that same output is turned on in ladder logic, then the output will be turned on.*
 
 ### Example 1 - Controlling Two Outputs with One Input
 In this example input 0 (DIN 0) is used to control two different outputs - OUT 1 and OUT 2. In the normally open position on Rung 0, OUT 1 will be turned on. On Rung 1, when DIN 0 is in the normally closed position, OUT 2 will be turned on. In this example, the first column is populated with the appropriate input. The spaces between the columns are filled with wires, and the desired output is placed in the last, or coil, position.
@@ -75,7 +75,12 @@ Another option is to use Register 10 to sound an alarm. This can be configured o
 
 ![example 4](img/ladder_logic/example_04.png) 
 
-### Example 5 - Starting a Process With an Input
+### Example 5 - Stopping an Alarm with a DIN
+If you have an alarm set to Register 10 as in the previous example, you can use a DIN to turn off the alarm. To accomplish this, configure the DIN as NC. Place Register 10 in the coil position as NO.
+
+![example 5](img/ladder_logic/example_alarm_din.png)
+
+### Example 6 - Starting a Process With an Input
 In this example, you can connect a two-way switch to a DIN to start or stop a process.
 
-![example 5](img/ladder_logic/example_05.png)
+![example 6](img/ladder_logic/example_05.png)
