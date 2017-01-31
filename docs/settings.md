@@ -77,7 +77,7 @@ Before you can make changes to your network settings, you must first click on th
 
 ![networking](/img/settings/network_settings.png)
 
-If you are using port forwarding, you may want to use a non-standard TCP port on the BCS. To change the port assignment, use the up and down arrows in the **Port** box.
+If you are using port forwarding, you may want to use a non-standard TCP port on the BCS. To change the port assignment, use the up and down arrows in the **Port** box. The default TCP port web pages is 80, so it is best to choose some other port (preferably something above 10000 and lower than 65535) if you are using port forwarding to access your BCS using your public IP address. Be aware that you run the risk of a hacker running a port scan on your public IP address and still finding your BCS even if you are using port forwarding. You should always enable authentication if you are going to access your BCS remotely. Even if you are using port forwarding and authentication, it would be very simple for a denial of service attack to bring down your BCS. Best practice is to configure a VPN into your network if you need to access your BCS remotely. VPN setup is independent from the BCS and beyond the scope of this document.
 
 To manually assign an IP address to your BCS, uncheck the *DHCP Enabled* box, enter you IP address information in the **Advanced** section, and click on the **Reset BCS** button.
 
